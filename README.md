@@ -15,11 +15,9 @@ DELETE:
 0.0.0.0:5000/api/books/<id> (mevcut kitabi siler)
 
 *Ekleme ve guncelleme icin json body ornegi:
-
+```json
 {
-
-    "author": "George Orwell",
-    
+    "author": "George Orwell",   
     "title": "1984"
-    
 }
+```
