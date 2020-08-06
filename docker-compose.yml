@@ -1,0 +1,19 @@
+version: '3'
+
+services: 
+    elasticsearch:
+        build: elasticsearch/
+        ports:
+            - 9200:9200
+            - 9300:9300
+        container_name: elasticsearch
+        environment:
+            - discovery.type=single-node
+
+    api:
+        build: api/
+        depends_on:
+            - elasticsearch
+        container_name: api
+        ports:
+            - 5000:5000
